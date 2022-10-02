@@ -7,8 +7,6 @@ function info () {
     .catch(e => console.log(e))
 }
 
-console.log(info());
-
 async function dataSent(){
     let nome = await nomeFicticio.value;
     let email = await emailExample.value;
