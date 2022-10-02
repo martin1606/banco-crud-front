@@ -1,12 +1,5 @@
 const url = 'https://bancocrud-back-production.up.railway.app/'
 
-function info () {
- fetch(url)
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(e => console.log(e))
-}
-
 async function dataSent(){
     let nome = await nomeFicticio.value;
     let email = await emailExample.value;
