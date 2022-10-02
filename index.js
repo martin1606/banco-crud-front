@@ -42,16 +42,11 @@ async function dataSent(){
 }
 }
 
-function limpaCorpoTabela(){
-    while(bodyTable.firstChild){
-    bodyTable.removeChild(bodyTable.firstChild);
-}
-}
+
 
 async function dataSearch(){
     let email = emailSearch.value;
 
-    limpaCorpoTabela();
 
     if(!email){
         alert('Por favor preencher email.')
@@ -64,30 +59,12 @@ async function dataSearch(){
             if(dado == '[]'){
                 alert('Email não cadastrado')
             } else {
-                const nomeT = document.createElement('td');
-                const emailT = document.createElement('td');
-                const corT = document.createElement('td');
-                const estacaoT = document.createElement('td');
-                const comidaT = document.createElement('td');
-                
-                const nome = document.createTextNode(data[0].nome);
-                const email = document.createTextNode(data[0].email);
-                const cor = document.createTextNode(data[0].cor);
-                const estacao = document.createTextNode(data[0].estacao);
-                const comida = document.createTextNode(data[0].comida);
-
-                nomeT.appendChild(nome);
-                emailT.appendChild(email);
-                corT.appendChild(cor);
-                estacaoT.appendChild(estacao);
-                comidaT.appendChild(comida);
-                
-                bodyTable.appendChild(nomeT)
-                bodyTable.appendChild(emailT)
-                bodyTable.appendChild(corT)
-                bodyTable.appendChild(estacaoT)
-                bodyTable.appendChild(comidaT)
-                console.log(nome,email,cor,estacao,comida);
+                tableName.textContent = data[0].nome
+                tableEmail.textContent = data[0].email
+                tableColor.textContent = data[0].cor
+                tableSeason.textContent = data[0].estacao
+                tableFood.textContent = data[0].comida
+               
             }
         })
             

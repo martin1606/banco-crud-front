@@ -52,18 +52,26 @@
       </div>
       <button id="searchData" onclick="dataSearch()" class="btn btn-primary">Buscar Dados</button>
       <table>
-        <thead>
-          <tr>
-            <th id="tableName">Nome</th>
-            <th id="tableEmail">Email</th>
-            <th id="tableColor">Cor</th>
-            <th id="tableSeason">Estação</th>
-            <th id="tableFood">Comida</th>
+        <tbody id="tableAll">
+          <tr >
+            <th >Nome</th>
+            <td id="tableName"></td>
           </tr>
-        </thead>
-        <tbody>
-          <tr id="bodyTable">
-
+          <tr >
+            <th>Email</th>
+            <td id="tableEmail"></td>
+          </tr>
+          <tr>
+            <th>Cor</th>
+            <td id="tableColor"></td>
+          </tr>
+          <tr>
+            <th>Estação</th>
+            <td id="tableSeason"></td>
+          </tr>
+          <tr>
+            <th>Comida</th>
+            <td id="tableFood"></td>
           </tr>
         </tbody>
       </table>
